@@ -14,20 +14,12 @@
     "type-check": "tsc --noEmit",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "prepare": "husky install",
-    "check": "npm run lint && npm run format:check && npm run test"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "check": "npm run lint && npm run format:check && npm run test",
+    "prepare": "husky"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{js,jsx,css,md,json}": [
       "prettier --write"
     ]
   },
